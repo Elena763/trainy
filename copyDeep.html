@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+    content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    let age = 18;
+    let age2 = age;
+    var a = {
+        name: "lenasuper",
+        protocol: "https",
+        maxStudentsCount: 10,
+        isonline: true,
+        students: ['ivan', 'andrei', 'farid'],
+        classroom: {
+            teatcher: {
+                name: 'wew',
+                age: 18,
+            }
+        }
+    }
+    var b = a;
+
+   // b.name = "lenatupen";
+    //console.log(a.name);
+
+    // var c = {...a};
+    // console.log(a.name);
+    // c.name = "lenatupen";
+    // console.log(a.name);
+    // console.log(a.students);
+    // c.students.push("Mary");
+    // console.log(a.students);
+    // console.log(c.students);
+    // console.log(a.classroom);
+    // c.classroom.teatcher.name = 'Lena';
+    // console.log(a.classroom);
+    // console.log(c.classroom);
+
+    var d = {...a}
+    d.classroom = {...a.classroom};
+    d.classroom.teatcher = {...a.classroom.teatcher};
+    d.teatcher = {...a.teatcher};
+    d.students = {...a.students};
+    d.classroom.teatcher.name = 'Lena';
+    console.log(a.classroom);
+    console.log(d.classroom);
+
+</script>
+</html>
